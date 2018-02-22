@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SITNIKS</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class="page">
+	<div class="side-bar">
+        <div class="side-bar__btn-open">
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        </div>
+      	<div class="side-bar__items">
+      		<a href="" class="side-bar__item">
+      			<i class="icon-phone"></i>
+      			<span>Телефония</span>
+      		</a>
+      		<a href="" class="side-bar__item">
+      			<i class="icon-envelop"></i>
+      			<span>СМС рассылка</span>
+      		</a>
+      		<a href="" class="side-bar__item">
+      			<i class="icon-telegram"></i>
+      			<span>e-mail рассылка</span>
+      		</a>
+      	</div>
+
+	</div>
+	<div class="side-nav">
+        <div class="side-nav__btn-open">
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        </div>
+        <div class="side-nav__content">
+	      	<div class="side-nav__items">
+	      		<a href="" class="side-nav__item">Главная</a>
+	      		<a href="" class="side-nav__item">Статистика</a>
+	      		<a href="" class="side-nav__item">Рассылка</a>
+	      	</div>
+        </div>
+      	<div class="side-nav__btn-box">
+      		<a href="edit_tbl.html" class="btn waves-effect waves-light modal-trigger">
+      			<i class="icon-pencil"></i>
+      		</a>
+      		<a href="#add_tbl" class="btn waves-effect waves-light modal-trigger">
+      			<i class="icon-plus"></i>
+      		</a>
+      		<a href="#delete_tbl" class="btn waves-effect waves-light modal-trigger">
+      			<i class="icon-bin"></i>
+      		</a>
+      	</div>
+	</div>
+	<div class="page__inner">
+		<div class="header">
+			<a href="index.html" class="logo">
+				<img src="img/logo.png" alt="">
+			</a>
+			<div class="user">
+				<div class="user__name dropdown-button" data-activates='user-dropdown-content'>
+					<i class="icon-user"></i>
+					<span>sitnikovalex@gmail.com</span>
+				</div>
+				<div class="user__btns dropdown-content" id="user-dropdown-content">
+					<a href="#" class="btn waves-effect waves-light">Добавить пользователя</a>
+					<a href="#" class="btn waves-effect waves-light">Изменить пароль</a>
+					<a href="#" class="btn waves-effect waves-light">Выйти</a>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<h3 class="center-align">Главная</h3>
+			<div class="breadcrumbs">
+				<a href="#!" class="breadcrumb">Главная</a>
+				<span class="breadcrumb">Ситников</span>
+			</div>
+			<div class="row">
+				<button class="btn waves-effect waves-light">Создать колонку</button>
+			</div>
+			<div class="tbl-box">
+				<div class="tbl">
+					<table class="bordered highlight responsive-table">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Название калонки</th>
+								<th>Тип колонки</th>
+								<th>Отоброжать</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Имя</td>
+								<td>Текст</td>
+								<td>Показывать</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Телефон</td>
+								<td>Текст</td>
+								<td>Показывать</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Дата</td>
+								<td>Текст</td>
+								<td>Показывать</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">All rights are reserved SGroup.com</div>
+</div>
+<div id="add_tbl" class="modal modal_tbl">
+    <div class="modal-content">
+		<h4 class="center-align">Создать таблицу</h4>
+		<form action="" class="add_tbl__form">
+			<div class="input-field error">
+				<input id="add_tbl_name" type="text" class="validate">
+				<label for="add_tbl_name">Название таблици</label>
+				<span class="input-field__note">Текст ошибки</span>
+			</div>
+			<div class="btn-group center-align">
+				<button class="btn waves-effect waves-light">Создать</button>
+				<button class="btn waves-effect waves-light modal-action modal-close">Отмена</button>
+			</div>
+		</form>
+    </div>
+</div>
+<div id="delete_tbl" class="modal modal_tbl">
+    <div class="modal-content">
+		<h4 class="center-align">Удалить таблицу</h4>
+		<form action="" class="delete_tbl__form">
+			<div class="input-field success">
+				<select>
+					<option value="" disabled selected>Выберите таблицу</option>
+					<option value="1">Главная</option>
+					<option value="2">Статистика</option>
+					<option value="3">Рассылка</option>
+				</select>
+				<span class="input-field__note">Текст success</span>
+			</div>
+			<div class="btn-group center-align">
+				<button class="btn waves-effect waves-light">Удалить</button>
+				<button class="btn waves-effect waves-light modal-action modal-close">Отмена</button>
+			</div>
+		</form>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/initial.js"></script>
+</body></html>

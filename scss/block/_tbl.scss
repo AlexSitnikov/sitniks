@@ -1,0 +1,42 @@
+.tbl {
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	margin-top: 30px;
+
+	table {
+		width: auto;
+		table-layout: fixed;
+		margin: 0 auto;
+	}
+
+	th {
+		min-width: 150px;
+
+		&:first-child {
+			min-width: auto;
+		}
+	}
+
+	&__phone {
+
+		span {
+			display: block;
+			margin: 5px 0;
+		}
+	}
+
+	&__date {
+		white-space: nowrap;
+	}
+
+	&__text {
+		
+	}
+
+	.btn-flat {
+		padding: 0 1rem;
+		height: 16px;
+		line-height: 16px;
+	}
+}

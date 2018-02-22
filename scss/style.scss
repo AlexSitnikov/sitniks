@@ -1,0 +1,49 @@
+
+@import 'reset.scss';
+@import 'fonts.scss';
+
+// components
+@import 'components/materialize/materialize.scss';
+@import 'castom.scss';
+
+// block
+@import 'block/header.scss';
+@import 'block/footer.scss';
+@import 'block/logo.scss';
+@import 'block/side-bar.scss';
+@import 'block/side-nav.scss';
+@import 'block/modal_tbl.scss';
+@import 'block/tbl.scss';
+
+
+// page
+@import 'page/index.scss';
+
+.content {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+
+    &-inner {
+        display: block;
+        width: 100%;
+    }
+}
+
+.page {
+	min-height: 100%;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+  	flex-direction: column;
+	justify-content: space-between;
+    transition: padding 0.3s ease-in 0s;
+    padding: 0 70px;
+    overflow: hidden;
+
+    &__inner {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+

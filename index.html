@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SITNIKS</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+<div class="page">
+	<div class="side-bar">
+        <div class="side-bar__btn-open">
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        </div>
+      	<div class="side-bar__items">
+      		<a href="" class="side-bar__item">
+      			<i class="icon-phone"></i>
+      			<span>Телефония</span>
+      		</a>
+      		<a href="" class="side-bar__item">
+      			<i class="icon-envelop"></i>
+      			<span>СМС рассылка</span>
+      		</a>
+      		<a href="" class="side-bar__item">
+      			<i class="icon-telegram"></i>
+      			<span>e-mail рассылка</span>
+      		</a>
+      	</div>
+
+	</div>
+	<div class="side-nav">
+        <div class="side-nav__btn-open">
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        	<span></span>
+        </div>
+        <div class="side-nav__content">
+	      	<div class="side-nav__items">
+	      		<a href="" class="side-nav__item">Главная</a>
+	      		<a href="" class="side-nav__item">Статистика</a>
+	      		<a href="" class="side-nav__item">Рассылка</a>
+	      	</div>
+        </div>
+      	<div class="side-nav__btn-box">
+      		<a href="edit_tbl.html" class="btn waves-effect waves-light modal-trigger">
+      			<i class="icon-pencil"></i>
+      		</a>
+      		<a href="#add_tbl" class="btn waves-effect waves-light modal-trigger">
+      			<i class="icon-plus"></i>
+      		</a>
+      		<a href="#delete_tbl" class="btn waves-effect waves-light modal-trigger">
+      			<i class="icon-bin"></i>
+      		</a>
+      	</div>
+	</div>
+	<div class="page__inner">
+		<div class="header">
+			<a href="index.html" class="logo">
+				<img src="img/logo.png" alt="">
+			</a>
+			<div class="user">
+				<div class="user__name dropdown-button" data-activates='user-dropdown-content'>
+					<i class="icon-user"></i>
+					<span>sitnikovalex@gmail.com</span>
+				</div>
+				<div class="user__btns dropdown-content" id="user-dropdown-content">
+					<a href="#" class="btn waves-effect waves-light">Добавить пользователя</a>
+					<a href="#" class="btn waves-effect waves-light">Изменить пароль</a>
+					<a href="#" class="btn waves-effect waves-light">Выйти</a>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<h3 class="center-align">Главная</h3>
+			<div class="breadcrumbs">
+				<a href="#!" class="breadcrumb">Главная</a>
+				<span class="breadcrumb">Ситников</span>
+			</div>
+			<div class="row">
+				<button class="btn waves-effect waves-light search__btn">Поиск</button>
+				<a href="#" class="btn waves-effect waves-light">Exel</a>
+			</div>
+			<div class="row search-box">
+				<div class="col s12 l8 offset-l2 xl6 offset-xl3">
+					<div class="row valign-wrapper">
+						<div class="input-field col s11">
+							<input type="text" class="validate">
+							<label>Last Name</label>
+						</div>
+						<div class="col s1">
+							<input type="checkbox" checked="checked" id="c1"/>
+							<label for="c1"></label>
+						</div>
+					</div>
+					<div class="row valign-wrapper">
+						<div class="input-field col s11">
+							<input type="text" class="datepicker">
+							<label>Дата</label>
+						</div>
+						<div class="col s1">
+							<input type="checkbox" checked="checked" id="c2"/>
+							<label for="c2"></label>
+						</div>
+					</div>
+					<div class="row valign-wrapper">
+						<div class="input-field col s11">
+							<select>
+								<option value="" disabled selected>Choose your option</option>
+								<option value="1">Option 1</option>
+								<option value="2">Option 2</option>
+								<option value="3">Option 3</option>
+							</select>
+							<label>Materialize Select</label>
+						</div>
+						<div class="col s1">
+							<input type="checkbox" checked="checked" id="c3"/>
+							<label for="c3"></label>
+						</div>
+					</div>
+					<div class="row valign-wrapper">
+						<div class="input-field col s11">
+							<textarea class="materialize-textarea"></textarea>
+							<label>Textarea</label>
+						</div>
+						<div class="col s1">
+							<input type="checkbox" checked="checked" id="c4"/>
+							<label for="c4"></label>
+						</div>
+					</div>
+					<div class="center-align">
+						<button class="btn waves-effect waves-light">Поиск</button>
+						<button class="btn waves-effect waves-light search__cansel">Отмена</button>
+					</div>
+				</div>
+			</div>
+			<div class="tbl-box">
+				<div class="tbl">
+					<table class="bordered highlight responsive-table">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Имя</th>
+								<th>Телефон</th>
+								<th class="tbl__date">Дата</th>
+								<th class="tbl__date">Дата</th>
+								<th class="tbl__date">Дата</th>
+								<th class="tbl__date">Дата</th>
+								<th class="tbl__date">Дата</th>
+								<th>Коментарии</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td><a href="mailto:sitnikovalex@gmail.com">sitnikovalex@gmail.com</a></td>
+								<td>
+									<span>0679356095</span>
+								</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Ситников Алексей Михайлович</td>
+								<td>
+									<span>0679356095</span>
+								</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Ситников Алексей Михайлович</td>
+								<td>
+									<span>0679356095</span>
+								</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Ситников Алексей Михайлович</td>
+								<td>
+									<span>0679356095</span>
+								</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Ситников Алексей Михайлович</td>
+								<td>
+									<span>0679356095</span>
+								</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Ситников Алексей Михайлович</td>
+								<td>
+									<span>0679356095</span>
+								</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Ситников Алексей Михайлович</td>
+								<td>
+									<span>0679356095</span>
+								</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Ситников Алексей Михайлович</td>
+								<td>
+									<span>0679356095</span>
+								</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Ситников Алексей Михайлович</td>
+								<td>
+									<span>0679356095</span>
+								</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="" class="btn-flat">
+										<i class="icon-pencil"></i>
+									</a>
+								</td>
+								<td>Ситников Алексей Михайлович</td>
+								<td>
+									<span>0679356095</span>
+								</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td class="tbl__date">8 February, 2018</td>
+								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<ul class="pagination center-align">
+					<li class="active"><a href="#!">1</a></li>
+					<li>...</li>
+					<li class="waves-effect"><a href="#!">2</a></li>
+					<li class="waves-effect"><a href="#!">3</a></li>
+					<li class="waves-effect"><a href="#!">4</a></li>
+					<li>...</li>
+					<li class="waves-effect"><a href="#!">99</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer">All rights are reserved SGroup.com</div>
+</div>
+<div id="add_tbl" class="modal modal_tbl">
+    <div class="modal-content">
+		<h4 class="center-align">Создать таблицу</h4>
+		<form action="" class="add_tbl__form">
+			<div class="input-field error">
+				<input id="add_tbl_name" type="text" class="validate">
+				<label for="add_tbl_name">Название таблици</label>
+				<span class="input-field__note">Текст ошибки</span>
+			</div>
+			<div class="btn-group center-align">
+				<button class="btn waves-effect waves-light">Создать</button>
+				<button class="btn waves-effect waves-light modal-action modal-close">Отмена</button>
+			</div>
+		</form>
+    </div>
+</div>
+<div id="delete_tbl" class="modal modal_tbl">
+    <div class="modal-content">
+		<h4 class="center-align">Удалить таблицу</h4>
+		<form action="" class="delete_tbl__form">
+			<div class="input-field success">
+				<select>
+					<option value="" disabled selected>Выберите таблицу</option>
+					<option value="1">Главная</option>
+					<option value="2">Статистика</option>
+					<option value="3">Рассылка</option>
+				</select>
+				<span class="input-field__note">Текст success</span>
+			</div>
+			<div class="btn-group center-align">
+				<button class="btn waves-effect waves-light">Удалить</button>
+				<button class="btn waves-effect waves-light modal-action modal-close">Отмена</button>
+			</div>
+		</form>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/materialize.min.js"></script>
+<script src="js/initial.js"></script>
+</body></html>
