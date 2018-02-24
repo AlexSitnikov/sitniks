@@ -165,3 +165,23 @@
 		}
 	}
 }
+
+.mytbl {
+	display: none;
+	width: 100%;
+	padding-left: 10px;
+	padding-top: 20px;
+
+	&__btn {
+		cursor: pointer;
+	}
+
+	.side-nav__item {
+		margin-bottom: 10px;
+		font-size: 0.9em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

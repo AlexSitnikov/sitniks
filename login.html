@@ -11,14 +11,14 @@
 <body>
 <div class="page">
 	<div class="page__inner">
-		<div class="header row">
+		<div class="header">
 			<a href="index.html" class="logo">
 				<img src="img/logo.png" alt="">
 			</a>
 			<div class="user">
 				<div class="user__name dropdown-button" data-activates='user-dropdown-content'>
 					<i class="icon-user"></i>
-					<span>sitnikovalex@gmail.com</span>
+					<span>Вход</span>
 				</div>
 				<div class="user__btns dropdown-content" id="user-dropdown-content">
 					<a href="#" class="btn waves-effect waves-light">Добавить пользователя</a>
@@ -28,8 +28,9 @@
 			</div>
 		</div>
 		<div class="content">
+			<h3 class="center-align">Авторизация</h3>
 			<div class="row">
-				<div class="col s12 l8 offset-l2 xl6 offset-xl3">
+				<div class="col s12 l8 offset-l2 xl4 offset-xl4">
 					<div class="input-field">
 						<input type="text" class="validate">
 						<label>login</label>
@@ -45,7 +46,29 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer">All rights are reserved SGroup.com</div>
+	<div class="footer">
+		<div class="copy">&copy; Sitniks.com</div>
+		<a href="#callback" class="btn waves-effect waves-light modal-trigger">Написать нам</a>
+	</div>
+</div>
+<div id="callback" class="modal modal_tbl">
+    <div class="modal-content">
+		<h4 class="center-align">Написать нам</h4>
+		<form action="" class="add_tbl__form">
+			<div class="input-field error">
+				<input id="" type="text" class="validate">
+				<label for="">Ваш email</label>
+				<span class="input-field__note">Текст ошибки</span>
+			</div>
+			<div class="input-field">
+				<textarea class="materialize-textarea"></textarea>
+				<label>Текст сообщения</label>
+			</div>
+			<div class="btn-group center-align">
+				<button class="btn waves-effect waves-light">Отправить</button>
+			</div>
+		</form>
+    </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

@@ -45,4 +45,11 @@ jQuery(document).ready(function($) {
 	    $('.search-box').fadeOut(0);
 		$('.tbl-box').fadeIn(300);
 	});
+	
+	$('.mytbl__btn').on('click', function(event) {
+		event.preventDefault();
+	    $('.mytbl').slideToggle();
+	});
+
+
 });
