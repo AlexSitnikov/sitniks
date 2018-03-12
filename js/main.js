@@ -51,5 +51,60 @@ jQuery(document).ready(function($) {
 	    $('.mytbl').slideToggle();
 	});
 
+	function tooltip() {
+		var tooltipText, windowWidth, windowHeight;
+		$("body").append("<div class='tooltip'></div>");
+	  
+		//get actual window size
+		function winSize() {
+			windowWidth = $(window).width(),
+			windowHeight = $(window).height();
+		}
+		winSize();
+		$(window).resize(winSize);
+		//tooltip fadeIn and fadeOut on hover 
+			$(".data-tooltip").hover(function() {
+				tooltipText = $(this).attr("data-tooltip");
+				$('.tooltip').text('');
+				$('.tooltip').text(tooltipText);
+				$('.tooltip').fadeIn('fast');
+			}, function() {
+				$('.tooltip').fadeOut('fast');
+			});
+
+
+		//tooltip position
+		$(document).mousemove(function(e) {
+			var mouseY = e.clientY,
+			mouseX = e.clientX,
+			tooltipHeight,
+			tooltipWidth;
+
+			$('.tooltip').each(function() {
+				var $tooltip = $(this);
+				tooltipHeight = $tooltip.outerHeight();
+				tooltipWidth = $tooltip.width();
+
+				$tooltip.css({
+					'left':mouseX,
+					'top':mouseY+20
+				});
+
+				//reposition
+				if (tooltipWidth + mouseX + 20> windowWidth) {
+					$tooltip.css({
+					'left':mouseX-tooltipWidth-20
+					});
+				}
+
+				if (tooltipHeight + mouseY + 20 > windowHeight) {
+					$tooltip.css({
+					'top':mouseY-20-tooltipHeight
+					}); 
+				};
+			});//end each
+		});//tooltip position
+	};
+	tooltip();
 
 });

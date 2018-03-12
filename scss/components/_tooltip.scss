@@ -1,0 +1,17 @@
+.tooltip {
+	position: fixed;
+	display:none;
+	max-width: 200px;
+
+	color: #F4F8F7;
+	padding: 10px;
+	background-color: #E7552C;
+	font-size:14px;
+	left: -9999px;
+	box-sizing:border-box;
+	/*shadow*/
+	-webkit-box-shadow: 10px 7px 30px -7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 7px 30px -7px rgba(0,0,0,0.75);
+	box-shadow: 10px 7px 30px -7px rgba(0,0,0,0.75);
+	z-index: 9999;
+}
