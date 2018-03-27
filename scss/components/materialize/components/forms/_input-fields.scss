@@ -67,7 +67,7 @@ textarea.materialize-textarea {
 
 // Styling for input field wrapper
 .input-field {
-  &.error {
+  &.has-error {
     color: red;
 
     .input-field__note {
@@ -75,7 +75,7 @@ textarea.materialize-textarea {
     }
   }
 
-  &.success {
+  &.has-success {
     color: #26a69a;
     .input-field__note {
       display: block;
