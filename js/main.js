@@ -52,8 +52,9 @@ jQuery(document).ready(function($) {
 	});
 
 	function tooltip() {
-		var tooltipText, windowWidth, windowHeight;
-		$("body").append("<div class='tooltip'></div>");
+		var windowWidth,
+			windowHeight,
+			$tooltip = $("<div class='tooltip'></div>");
 	  
 		//get actual window size
 		function winSize() {
@@ -63,47 +64,54 @@ jQuery(document).ready(function($) {
 		winSize();
 		$(window).resize(winSize);
 		//tooltip fadeIn and fadeOut on hover 
-			$(".data-tooltip").hover(function() {
-				tooltipText = $(this).attr("data-tooltip");
-				$('.tooltip').text('');
-				$('.tooltip').text(tooltipText);
-				$('.tooltip').fadeIn('fast');
-			}, function() {
-				$('.tooltip').fadeOut('fast');
-			});
+		$("[data-tooltip]").hover(function() {
+			if ($tooltip) $tooltip.remove();
+            $tooltip = $("<div class='tooltip'></div>");
+            $('body').append($tooltip);
+            $(document).on('mousemove', refreshPosition);
 
+			$tooltip.text($(this).attr("data-tooltip"));
+			$tooltip.fadeIn('fast');
+		}, function() {
+			$('.tooltip').fadeOut('fast', function () {
+                $(document).off('mousemove', refreshPosition);
+				$(this).remove();
+				$tooltip = null;
+            });
+		});
 
-		//tooltip position
-		$(document).mousemove(function(e) {
-			var mouseY = e.clientY,
-			mouseX = e.clientX,
-			tooltipHeight,
-			tooltipWidth;
+        function refreshPosition(e) {
+            if ($tooltip) {
+                var mouseY = e.clientY,
+                    mouseX = e.clientX,
+                    tooltipHeight,
+                    tooltipWidth;
 
-			$('.tooltip').each(function() {
-				var $tooltip = $(this);
-				tooltipHeight = $tooltip.outerHeight();
-				tooltipWidth = $tooltip.width();
+                $tooltip.each(function () {
+                    var $tooltip = $(this);
+                    tooltipHeight = $tooltip.outerHeight();
+                    tooltipWidth = $tooltip.width();
 
-				$tooltip.css({
-					'left':mouseX,
-					'top':mouseY+20
-				});
+                    $tooltip.css({
+                        'left': mouseX,
+                        'top': mouseY + 20
+                    });
 
-				//reposition
-				if (tooltipWidth + mouseX + 20> windowWidth) {
-					$tooltip.css({
-					'left':mouseX-tooltipWidth-20
-					});
-				}
+                    //reposition
+                    if (tooltipWidth + mouseX + 20 > windowWidth) {
+                        $tooltip.css({
+                            'left': mouseX - tooltipWidth - 20
+                        });
+                    }
 
-				if (tooltipHeight + mouseY + 20 > windowHeight) {
-					$tooltip.css({
-					'top':mouseY-20-tooltipHeight
-					}); 
-				};
-			});//end each
-		});//tooltip position
+                    if (tooltipHeight + mouseY + 20 > windowHeight) {
+                        $tooltip.css({
+                            'top': mouseY - 20 - tooltipHeight
+                        });
+                    }
+                });//end each
+            }
+        }
 	};
 	tooltip();
 
