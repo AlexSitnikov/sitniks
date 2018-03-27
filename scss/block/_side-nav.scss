@@ -9,6 +9,10 @@
 	padding: 10px;
 	transition: width 0.3s ease-in 0s;
 
+	&_not {
+		padding-right: 15px !important;
+	}
+
 	&_open {
 		padding-right: 230px !important;
 
