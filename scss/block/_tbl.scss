@@ -56,6 +56,7 @@
 	justify-content: center;
 	white-space: normal;
 
+	a:first-child,
 	button:first-child {
 		transform: rotate(180deg);
 	}
