@@ -64,16 +64,19 @@
 	      		<a href="" class="side-nav__item">Рассылка</a>
 	      	</div>
         </div>
-      	<div class="side-nav__btn-box">
-      		<a href="edit_tbl.html" class="btn waves-effect waves-light modal-trigger data-tooltip" data-tooltip="Редактировать таблицу">
-      			<i class="icon-pencil"></i>
-      		</a>
-      		<a href="#add_tbl" class="btn waves-effect waves-light modal-trigger data-tooltip" data-tooltip="Добавить таблицу">
-      			<i class="icon-plus"></i>
-      		</a>
-      		<a href="#delete_tbl" class="btn waves-effect waves-light modal-trigger data-tooltip" data-tooltip="Удалить таблицу">
-      			<i class="icon-bin"></i>
-      		</a>
+      	<div class="side-nav__btns">
+      		<a href="#add_group" class="btn waves-effect waves-light modal-trigger add_group">Создать группу</a>
+      		<div class="side-nav__btns__group">
+	      		<a href="edit_tbl.html" class="btn waves-effect waves-light modal-trigger data-tooltip" data-tooltip="Редактировать таблицу">
+	      			<i class="icon-pencil"></i>
+	      		</a>
+	      		<a href="#add_tbl" class="btn waves-effect waves-light modal-trigger data-tooltip" data-tooltip="Добавить таблицу">
+	      			<i class="icon-plus"></i>
+	      		</a>
+	      		<a href="#delete_tbl" class="btn waves-effect waves-light modal-trigger data-tooltip" data-tooltip="Удалить таблицу">
+	      			<i class="icon-bin"></i>
+	      		</a>
+      		</div>
       	</div>
 	</div>
 	<div class="page__inner">
@@ -218,10 +221,37 @@
 		<a href="#callback" class="btn waves-effect waves-light modal-trigger">Написать нам</a>
 	</div>
 </div>
+<div id="add_group" class="modal modal_tbl">
+    <div class="modal-content">
+		<h4 class="center-align">Создать группу</h4>
+		<form action="" class="add_tbl__form">
+			<div class="input-field has-error">
+				<input id="add_tbl_name" type="text" class="validate">
+				<label for="add_tbl_name">Название группы</label>
+				<span class="input-field__note">Текст ошибки</span>
+			</div>
+			<div class="btn-group center-align">
+				<button class="btn waves-effect waves-light">Создать</button>
+				<button class="btn waves-effect waves-light modal-action modal-close">Отмена</button>
+			</div>
+		</form>
+    </div>
+</div>
 <div id="add_tbl" class="modal modal_tbl">
     <div class="modal-content">
 		<h4 class="center-align">Создать таблицу</h4>
 		<form action="" class="add_tbl__form">
+			<div class="input-field">
+				<select>
+					<option value="" disabled selected>Choose your option</option>
+					<option value="1">Таблици</option>
+					<option value="2">Статистика</option>
+					<option value="3">Рассылка</option>
+					<option value="3">Рассылка</option>
+					<option value="3">Рассылка</option>
+				</select>
+				<label>Группа</label>
+			</div>
 			<div class="input-field has-error">
 				<input id="add_tbl_name" type="text" class="validate">
 				<label for="add_tbl_name">Название таблици</label>

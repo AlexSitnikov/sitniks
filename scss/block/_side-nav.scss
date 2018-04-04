@@ -145,7 +145,7 @@
 	&__content {
 		height: 100%;
 		padding-top: 50px;
-		padding-bottom: 65px;
+		padding-bottom: 95px;
 	}
 
 	&__items {
@@ -153,19 +153,32 @@
 		overflow-y: auto;
 	}
 
-	&__btn-box {
+	&__btns {
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		width: 100%;
+		width: 210px;
 		padding: 10px;
-		white-space: nowrap;
+		text-align: center;
+
+		&__group {
+			white-space: nowrap;
+			width: 100%;
+			justify-content: space-between;
+			display: flex;
+		}
 
 		.btn {
 			white-space: nowrap;
-			margin: 0 5px;
+			margin: 0;
 			overflow: hidden;
 			padding: 0 1rem;
+		}
+
+		.add_group {
+			margin: 0 0 10px;
+			display: block;
+			width: 100%;
 		}
 	}
 }
