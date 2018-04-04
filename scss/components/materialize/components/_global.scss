@@ -46,6 +46,11 @@ a {
 // classic clearfix
 .clearfix {
   clear: both;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 

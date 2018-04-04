@@ -50,16 +50,7 @@
         </div>
         <div class="side-nav__content">
 	      	<div class="side-nav__items">
-	      		<div class="side-nav__item">
-	      			<span class="mytbl__btn">Таблици</span>
-	      			<div class="mytbl">
-	      				<a href="" class="side-nav__item">Таблица1</a>
-	      				<a href="" class="side-nav__item">Таблица2</a>
-	      				<a href="" class="side-nav__item">Таблица3</a>
-	      				<a href="" class="side-nav__item">Таблица4</a>
-	      				<a href="" class="side-nav__item">Таблица5</a>
-	      			</div>
-	      		</div>
+	      		<a href="" class="side-nav__item">Главная</a>
 	      		<a href="" class="side-nav__item">Статистика</a>
 	      		<a href="" class="side-nav__item">Рассылка</a>
 	      	</div>
@@ -103,113 +94,91 @@
 				<span class="breadcrumb">Ситников</span>
 			</div>
 			<div class="row">
-				<button class="btn waves-effect waves-light search__btn">Поиск</button>
-				<a href="#" class="btn waves-effect waves-light">Exel</a>
-			</div>
-			<div class="row search-box">
 				<div class="col s12 l8 offset-l2 xl6 offset-xl3">
 					<div class="row">
-						<div class="clearfix valign-wrapper">
-							<div class="input-field col s10">
-								<input type="text" class="datepicker">
-								<label>Дата</label>
-							</div>
-							<div class="col s2 center-align">
-								<input type="checkbox" checked="checked" id="c2"/>
-								<label for="c2"></label>
+						<div class="input-field">
+							<input type="text" class="validate">
+							<label>Название колонки</label>
+						</div>
+						<div class="input-field">
+							<select>
+								<option value="1">Строка</option>
+								<option value="2">Телефон</option>
+								<option value="3">Комментарий</option>
+								<option value="4">Почта</option>
+								<option value="5">Дата</option>
+								<option value="6">Список</option>
+								<option value="7">Кто создал</option>
+								<option value="8">Когда создали</option>
+								<option value="8">Кто изменил</option>
+								<option value="8">Когда изменили</option>
+							</select>
+							<label>Тип колонки</label>
+						</div>
+						<div class="clearfix">
+							<div class="col s11 offset-s1  valign-wrapper">
+								<div class="input-field col s10">
+									<input type="text" class="validate">
+									<label>Элемент списка 1</label>
+								</div>
+								<div class="col s2 center-align">
+									<button class="btn-flat waves-effect waves-light"><i class="icon-plus"></i></button>
+								</div>
 							</div>
 						</div>
-						<div class="clearfix valign-wrapper">
-							<div class="input-field col s10">
-								<select>
-									<option value="" disabled selected>Choose your option</option>
-									<option value="1">Option 1</option>
-									<option value="2">Option 2</option>
-									<option value="3">Option 3</option>
-								</select>
-								<label>Materialize Select</label>
-							</div>
-							<div class="col s2 center-align">
-								<input type="checkbox" checked="checked" id="c3"/>
-								<label for="c3"></label>
+						<div class="clearfix">
+							<div class="col s11 offset-s1  valign-wrapper">
+								<div class="input-field col s10">
+									<input type="text" class="validate">
+									<label>Элемент списка 2</label>
+								</div>
+								<div class="col s2 center-align">
+									<button class="btn-flat waves-effect waves-light"><i class="icon-plus"></i></button>
+									<button class="btn-flat waves-effect waves-light"><i class="icon-bin"></i></button>
+								</div>
 							</div>
 						</div>
-						<div class="clearfix valign-wrapper">
-							<div class="input-field col s10">
-								<textarea class="materialize-textarea"></textarea>
-								<label>Textarea</label>
+						<div class="clearfix">
+							<div class="col s11 offset-s1  valign-wrapper">
+								<div class="input-field col s10">
+									<input type="text" class="validate">
+									<label>Элемент списка 3</label>
+								</div>
+								<div class="col s2 center-align">
+									<button class="btn-flat waves-effect waves-light"><i class="icon-plus"></i></button>
+									<button class="btn-flat waves-effect waves-light"><i class="icon-bin"></i></button>
+								</div>
 							</div>
-							<div class="col s2 center-align">
-								<input type="checkbox" checked="checked" id="c4"/>
-								<label for="c4"></label>
-							</div>
+						</div>
+						<div class="input-field">
+							<input type="text" class="validate">
+							<label>Значение по умолчанию</label>
+						</div>
+						<div class="input-field">
+							<select>
+								<option value="1">Да</option>
+								<option value="2">Нет</option>
+							</select>
+							<label>Отображать в таблице</label>
+						</div>
+						<div class="input-field">
+							<select>
+								<option value="1">Да</option>
+								<option value="2">Нет</option>
+							</select>
+							<label>Обязательно для заполнения</label>
 						</div>
 					</div>
 					<div class="row center-align">
-						<button class="btn waves-effect waves-light">Поиск</button>
-						<button class="btn waves-effect waves-light search__cansel">Отмена</button>
+						<button class="btn waves-effect waves-light">Сохранить</button>
+						<button class="btn waves-effect waves-light">Удалить</button>
+						<button class="btn waves-effect waves-light">Отмена</button>
 					</div>
 				</div>
 			</div>
-			<div class="tbl-box">
-				<div class="tbl">
-					<table class="bordered highlight responsive-table">
-						<thead>
-							<tr>
-								<th></th>
-								<th>Имя</th>
-								<th>Телефон</th>
-								<th class="tbl__date">Дата</th>
-								<th class="tbl__date">Дата</th>
-								<th class="tbl__date">Дата</th>
-								<th class="tbl__date">Дата</th>
-								<th class="tbl__date">Дата</th>
-								<th>Коментарии</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="tbl__controls">
-									<div>
-										<a href="" class="btn-flat">
-											<i class="icon-pencil"></i>
-										</a>
-										<div class="td-move">
-											<button class="btn-flat"><i class="icon-arrow-down"></i></button>
-											<button class="btn-flat"><i class="icon-arrow-down"></i></button>
-										</div>
-									</div>
-								</td>
-								<td><a href="mailto:sitnikovalex@gmail.com">sitnikovalex@gmail.com</a></td>
-								<td>
-									<span>0679356095</span>
-								</td>
-								<td class="tbl__date">8 February, 2018</td>
-								<td class="tbl__date">8 February, 2018</td>
-								<td class="tbl__date">8 February, 2018</td>
-								<td class="tbl__date">8 February, 2018</td>
-								<td class="tbl__date">8 February, 2018</td>
-								<td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores labore voluptatem animi doloribus. Ut autem suscipit magnam nemo molestiae quasi.</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<ul class="pagination center-align">
-					<li class="active"><a href="#!">1</a></li>
-					<li>...</li>
-					<li class="waves-effect"><a href="#!">2</a></li>
-					<li class="waves-effect"><a href="#!">3</a></li>
-					<li class="waves-effect"><a href="#!">4</a></li>
-					<li>...</li>
-					<li class="waves-effect"><a href="#!">99</a></li>
-				</ul>
-			</div>
 		</div>
 	</div>
-	<div class="footer">
-		<div class="copy">&copy; Sitniks.com</div>
-		<a href="#callback" class="btn waves-effect waves-light modal-trigger">Написать нам</a>
-	</div>
+	<div class="footer">All rights are reserved SGroup.com</div>
 </div>
 <div id="add_group" class="modal modal_tbl">
     <div class="modal-content">
@@ -242,7 +211,7 @@
 				</select>
 				<label>Группа</label>
 			</div>
-			<div class="input-field has-error">
+			<div class="input-field error">
 				<input id="add_tbl_name" type="text" class="validate">
 				<label for="add_tbl_name">Название таблици</label>
 				<span class="input-field__note">Текст ошибки</span>
@@ -269,26 +238,6 @@
 			</div>
 			<div class="btn-group center-align">
 				<button class="btn waves-effect waves-light">Удалить</button>
-				<button class="btn waves-effect waves-light modal-action modal-close">Отмена</button>
-			</div>
-		</form>
-    </div>
-</div>
-<div id="callback" class="modal modal_tbl">
-    <div class="modal-content">
-		<h4 class="center-align">Написать нам</h4>
-		<form action="" class="add_tbl__form">
-			<div class="input-field error">
-				<input id="" type="text" class="validate">
-				<label for="">Ваш email</label>
-				<span class="input-field__note">Текст ошибки</span>
-			</div>
-			<div class="input-field">
-				<textarea class="materialize-textarea"></textarea>
-				<label>Текст сообщения</label>
-			</div>
-			<div class="btn-group center-align">
-				<button class="btn waves-effect waves-light">Отправить</button>
 				<button class="btn waves-effect waves-light modal-action modal-close">Отмена</button>
 			</div>
 		</form>
